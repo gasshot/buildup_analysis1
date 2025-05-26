@@ -1,0 +1,37 @@
+# pyproject.toml
+[project]
+name = "buildup_analysis1" 
+version = "0.1.0"
+description = "피부톤 분석"
+authors = [
+    {name = "KIO",email = "kanginoh@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12" # 여러분의 Python 버전에 맞게 설정
+dependencies = [
+    "opencv-python (>=4.11.0.86,<5.0.0.0)",
+    "dlib (>=19.24.9,<20.0.0)",
+    "imutils (>=0.5.4,<0.6.0)",
+    "scikit-learn (>=1.6.1,<2.0.0)",
+    "numpy (>=2.2.6,<3.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)",
+    "scikit-image (>=0.25.2,<0.26.0)",
+    "colormath (>=3.0.0,<4.0.0)",
+    "fastapi (>=0.115.12,<0.116.0)",
+    "uvicorn[standard] (>=0.34.2,<0.35.0)",
+    "python-multipart",
+    "httpx (>=0.28.1,<0.29.0)"
+]
+
+# --- 중요! 이 packages 섹션은 완전히 삭제하거나 주석 처리해야 합니다. ---
+# packages = [
+#     {include = "ShowMeTheColor/src"}
+# ]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# --- 이 섹션이 정확히 이렇게 들어가 있어야 합니다. ---
+[tool.poetry]
+package-mode = false
